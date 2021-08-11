@@ -1,0 +1,155 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #1b98ff;
+    --heading-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f9fb;
+    background-image: url(https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?cs=srgb&dl=pexels-engin-akyurt-1435752.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-font-family);
+}
+
+.price-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 1rem;
+}
+
+.price-column {
+    background-color: white;
+    box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+    padding: 2rem; 
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 275px;
+    border-radius: 8px;
+}
+
+.price-column.other {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+    padding: 2rem; 
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 275px;
+    border-radius: 8px;
+}
+
+.price-column:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.price-column:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.price-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2rem;
+    display: flex;
+}
+
+.rand-sign{
+    font-size: 1.5rem;
+    margin-right: .10rem;
+}
+
+.per-day{
+    font-size: .75rem;
+    align-self: flex-end;
+    margin-bottom: 0.7rem;
+}
+
+.hotel-name{
+    text-transform: uppercase;
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+
+.divider{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.price-column.other .divider{
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.small-heading{
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+
+.feature {
+    display: flex;
+    align-self: center;
+    margin: .2rem;
+}
+
+.feature i {
+    margin-top: 0.35rem;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    height: 1.1em;
+    width: 1.1em;
+}
+
+.book-button {
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    width: 100%;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 3rem;
+    transition: 100ms;
+    transform: scale(1);
+}
+
+.price-column.other .book-button{
+    background-color: white;
+    color: var(--accent-color);
+}
+
+.book-button:hover, .book-button:focus {
+    transform: scale(1.1);
+}
+
+@media (max-width: 584px) {
+    .price-comparison{
+        max-width: 100%;
+        width: 100%;
+        font-size: 1rem;
+    }
+}

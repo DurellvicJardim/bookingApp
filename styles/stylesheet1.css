@@ -1,0 +1,99 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --heading-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Lato', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: var(--body-font-family);
+    background-image: url(https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-457881.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #279eff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 7px 30px rgba(52, 13, 135, 0.3);
+}
+
+.container .title{
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: white;
+}
+
+form .submit {
+    border: none;
+    background-color: white;
+    color: #279eff;
+    width: 100%;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    transition: 100ms;
+    transform: scale(1);
+}
+
+.submit:hover, .submit:focus {
+    transform: scale(1.05);
+}
+
+@media (max-width: 584px) {
+    .container{
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #1b98ff;
+    --heading-font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f9fb;
+    background-image: url(https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?cs=srgb&dl=pexels-engin-akyurt-1435752.jpg&fm=jpg);
+    background-position: center;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading-font-family);
+}
